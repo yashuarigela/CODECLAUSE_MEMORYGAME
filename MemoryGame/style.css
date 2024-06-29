@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af); /* Gradient background */
+    position: relative; /* Ensure the body is the reference for absolute positioning */
+}
+
+.game-heading {
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.game-container {
+    background: rgba(236, 240, 241, 0.9); /* Semi-transparent background */
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    text-align: center;
+}
+
+.score-panel {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.timer, .moves {
+    font-size: 18px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+}
+
+.deck {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background: #2980b9;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0;
+    position: relative;
+}
+
+.card.open, .card.match {
+    background: #27ae60;
+    font-size: 40px;
+    color: white;
+}
+
+.card.match {
+    background: #2ecc71;
+}
+
+.card i {
+    display: none;
+}
+
+.card.open i, .card.match i {
+    display: block;
+}
+
+.bottom-right-image {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    width: 300px; /* Increase size to 300px */
+    height: auto; /* Maintain aspect ratio */
+}
